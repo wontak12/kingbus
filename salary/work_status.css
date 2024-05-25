@@ -1,0 +1,133 @@
+table {
+    width: 180%;
+    height: 100%;
+
+
+}
+
+
+.table-container {
+    font-size: 1.4rem;
+    overflow-x: auto;
+    
+}
+
+.table-list_super-head-tr th{
+    border: 1px solid gray;
+    padding: 8px;
+    text-align: center;
+    background-color: white; /* 배경색 추가 */
+
+}
+.table-list_super-head-tr td {
+    border: 1px solid gray; /* 모든 셀에 검은색 테두리 적용 */
+    padding: 8px;
+    text-align: center;
+ 
+}
+
+.sticky {  
+    position: sticky;  
+    background-color: #f2f2f2; /* 고정 열의 배경색을 설정하여 스크롤 시에도 헤더가 잘 보이도록 함 */
+    z-index: 2; /* 다른 셀보다 위에 표시되도록 설정 */ 
+}
+
+.StickythFirst {
+    left: 0;
+    z-index: 3;
+
+  }
+  
+  .StickythSecond {
+    left: 4.8rem;
+    z-index: 3;
+ /* 오른쪽 테두리 */
+  }
+  
+  .StickythThird {
+    left: 12.6rem;
+    z-index: 3;
+ /* 오른쪽 테두리 */
+}
+
+
+.header-row th:nth-child(1){
+    width: 3rem;
+}
+.header-row th:nth-child(2){
+  width: 6rem;
+}
+.header-row th:nth-child(3){
+  width: 6rem;
+}
+
+.tableHead tr {
+    font-size: 1.4rem;
+    color: white;
+}
+
+
+/*Search CSS*/
+.search-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6.6rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+    background-color: white;
+    box-sizing: border-box;
+}
+.search-Form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+.search-Form_label{
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+.search-Form input[type=month]{
+  width: 12rem;
+  margin-right: 2rem;
+}
+
+.search-Form_input{
+  width: 18rem;
+  height: 2.6rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Noto Sans CJK KR";
+  ;
+  font-size: 1.4rem;
+}
+.search-Form_search-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  margin-left: 2rem;
+  padding: 0 1.8rem;
+  border : none;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #444444;
+  cursor: pointer;
+}
+.table-list_super-head-tr th {
+    text-align: center;
+    background-color: #444444; /* 상위 헤더의 배경색 */
+    color: white; /* 글자색 */
+    /* padding: 10px; 패딩 */
+  }
+table {
+  border-spacing: 0;
+}

@@ -1,0 +1,146 @@
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6.6rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+  background-color: white;
+  box-sizing: border-box;
+}
+.searchForm {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100%;
+}
+.searchFormLabel{
+font-size: 1.4rem;
+margin-right: 2rem;
+}
+.searchForm input[type=month]{
+width: 12rem;
+margin-right: 2rem;
+}
+
+.searchFormInput{
+width: 18rem;
+height: 2.6rem;
+padding-left: 1rem;
+box-sizing: border-box;
+border: 0.1rem solid #D2D2D2;
+border-radius: 0.2rem;
+outline: none;
+font-family: "Noto Sans CJK KR";
+font-size: 1.4rem;
+}
+
+.searchFormSearchBtn{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 2.6rem;
+margin-left: 2rem;
+padding: 0 1.8rem;
+border : none;
+border-radius: 0.2rem;
+font-size: 1.4rem;
+color: white;
+background-color: #444444;
+cursor: pointer;
+}
+
+
+/*table head*/
+.tableList{
+width: 100%;
+height: auto;
+border-spacing: 0;
+}
+.tableListSuperHeadTr th {
+text-align: center;
+background-color: #444444; /* 상위 헤더의 배경색 */
+color: white; /* 글자색 */
+padding: 10px; /* 패딩 */
+}
+
+.tableListHeadTr th {
+text-align: center;
+background-color: #444444; /* 하위 헤더의 배경색 */
+color: white; /* 글자색 */
+padding: 10px; /* 패딩 */
+}
+.tableListHeadTr{
+width: 2rem;
+height: 2.5rem;
+background-color: #444444;
+color: white;
+}
+
+.tableListHeadTrTd{
+height: 100%;
+text-align: center;
+box-sizing: border-box;
+}
+
+.tableList {
+
+border-collapse: collapse;
+}
+.tableList tbody tr td {
+text-align: center;
+}
+
+
+.tableList td, .tableList th {
+border: 1px solid #D2D2D2; 
+padding: 8px; 
+}
+input[type="checkbox" i] {
+width: 1.5rem;
+height: 1.5rem;
+background-color: initial;
+cursor: default;
+appearance: auto;
+box-sizing: border-box;
+margin: 3px 3px 3px 4px;
+padding: initial;
+border: initial;
+}
+.tableContainer {
+position: relative;
+width: 100%;
+height: calc(100% - 20.6rem);
+}
+
+
+.mainContents {
+display: flex;
+}
+table thead tr th:nth-child(1){
+width: 3%;
+}
+table thead tr th:nth-child(2){
+width: 6%;
+}
+table thead tr th:nth-child(3){
+width: 15%;
+}
+table thead tr th:nth-child(4){
+width: 6%;
+}
+table thead tr th:nth-child(5){
+width: 12%;
+}
+table thead tr th:nth-child(6),
+table thead tr th:nth-child(7),
+table thead tr th:nth-child(8),
+table thead tr th:nth-child(9),
+table thead tr th:nth-child(10),
+table thead tr th:nth-child(11)
+{
+width: 5.6%;
+}
