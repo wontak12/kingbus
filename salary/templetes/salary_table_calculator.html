@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="salary_name.css" />
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="/kingbus/salary/salary_table_calculator.css">
+    <link rel="stylesheet" href="/kingbus/salary/css/global.css">
+
     <title>DEV</title>
   </head>
   <body>
+    <!--sidemenu-->
     <div class="Sidemenu">
-      <!--sideMenuLogo-->
+      <!--sidemenuLogo-->
       <div class="logoBox">
         <a href="/service" style="color: white; font-size: 5rem">
           DEV
@@ -216,20 +218,69 @@
                   <li class="sideMenuNav2Menu">직원관리</li>
                 </a>
                 <a href="/HR/salary" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여관리(현재)</li>
+                  <li class="sideMenuNav2Menu">인사위원회</li>
                 </a>
                 <a href="/HR/salary/change" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여관리(변경)</li>
+                  <li class="sideMenuNav2Menu">팀원관리</li>
                 </a>
                 <a href="/HR/salary/outsourcing" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여관리(용역)</li>
-                </a>
-                <a href="/HR/salary/manager" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여관리(관리자)</li>
+                  <li class="sideMenuNav2Menu">인당효율</li>
                 </a>
                 <a href="/HR/team" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">팀관리</li>
                 </a>
+              </ul>
+            </div>
+          </div>
+          <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+            <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+              <img
+                class="nav1BoxMenuImg"
+                src="/static/images/HRManagement.png?v=0.1236"
+                alt="인사관리 아이콘"
+              />
+              <div>급여관리</div>
+              <svg
+                class="sideMenuArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18.228"
+                height="11.84"
+                viewBox="0 0 18.228 11.84"
+              >
+                <path
+                  id="패스_256"
+                  data-name="패스 256"
+                  d="M0,0,6.753,8.223,14,0"
+                  transform="translate(2.111 2.117)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                ></path>
+              </svg>
+            </li>
+            <div class="sideMenuNav2Box">
+              <ul class="sideMenuNav2">
+                <a href="/HR/member" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">급여관리</li>
+                </a>
+                <a href="/salary/salary_name.html" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">사원명부</li>
+                </a>
+                <a href="/salary/work_status.html" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">근무현황</li>
+                </a>
+                <a href="/salary/salary_table.html" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">임금테이블</li>
+                </a>
+                <a href="/HR/salary/outsourcing" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">임금계산기</li> <!--전이사, 최고관리자만-->
+                </a>
+                <a href="/HR/team" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">급여설명</li>
+                </a>
+                
               </ul>
             </div>
           </div>
@@ -441,6 +492,7 @@
         </a>
       </div>
     </div>
+    <!--sidemenu done-->
     <div class="MainContainer">
       <div class="Header">
         <div class="HeaderTitle">
@@ -486,6 +538,7 @@
         </div>
         <!--trp HeaderTitle-->
       </div>
+      
       <div class="MainContentsContainer">
         <div class="searchContainer">
             <form class="searchForm">
@@ -495,6 +548,9 @@
                 <input autocomplete="off" name="name" value="" type="text" class="searchFormInput">
                 <input type="submit" class="searchFormSearchBtn" value="검색">
             </form>
+            <div class="popupAreaBox">
+              <div class="popupAreaBoxBtn" onclick="openPopup()">급여명세서</div>
+          </div>
             <!-- <div class="popupAreaBox">
                 <div class="popupAreaBoxBtn" onclick="salaryPrint()">급여현황</div>
             </div> -->
@@ -502,62 +558,188 @@
         <form method="post" action="/HR/salary/edit" class="salaryContainer">
           <input type="hidden" name="csrfmiddlewaretoken" value="zcTCPQgOThRILvXsR9zofAvD8qYhOgo6juTSgPgqjRvQH7Q3FHI7OedkIjwc2f7X">
           <input type="hidden" name="month" value="2024-05">
+        </form>
           <!-- <input class="btnModules salarySaveBtn" type="submit" value="저장">
           <div class="btnModules salarySaveBtn salarySaveBtn2" onclick="loadPrevMonthlyBase()">불러오기</div> -->
-          <div class="scrollingTableListHeader">
-              <table class="tableList">
-                  <thead>
-                      <tr class="tableListHeadTr">
-                          <td class="tableListHeadTrTd">
-                              <input type="checkbox" class="amountCheckAll">
-                          </td>
-                          <td class="tableListHeadTrTd">번호</td>
-                          <td class="tableListHeadTrTd">이름</td>
-                          <td class="tableListHeadTrTd">구분</td>
-                          <td class="tableListHeadTrTd">입사일자</td>
-                          <td class="tableListHeadTrTd">퇴사일자</td>
-                          <td class="tableListHeadTrTd">주민등록번호</td>
-                          <td class="tableListHeadTrTd">연령</td>
-                          <td class="tableListHeadTrTd">본봉</td>
-                          <td class="tableListHeadTrTd">직책수당</td>
-                          <td class="tableListHeadTrTd">식대</td>
-                          <td class="tableListHeadTrTd">계</td>
-                          <td class="tableListHeadTrTd">기본시급</td>
-                          <td class="tableListHeadTrTd">통상시급</td>
-                          <td class="tableListHeadTrTd">공제</td>
-                          <td class="tableListHeadTrTd">합계</td>
-                          <td class="tableListHeadTrTd">은행</td>
-                          <td class="tableListHeadTrTd">계좌번호</td>
-                          <td class="tableListHeadTrTd">예금주</td>
-                      </tr>
-                  </thead>
-                  <tbody>
+        <div class="tableContainer">  
+          <table class="tableList">
+              <thead>
+                  <tr class="tableListSuperHeadTr">
+                      <th rowspan="2"><input type="checkbox" class="amountCheckAll"></th>
+                      <th rowspan="2">번호</th>
+                      <th rowspan="2">이름</th>
+                      <th rowspan="2">구분</th>
+                      <th rowspan="2">입사일자</th>
+                      <th rowspan="2">퇴사일자</th>
+                      <th rowspan="2">주민등록번호</th>
+                      <th rowspan="2">기본시급</th>
+                      <th rowspan="2">통상시급</th>
+                      <th rowspan="2">기본급</th>
+                      <th rowspan="2">직책수당</th>
+                      <th rowspan="2">식대</th>
+                      <th rowspan="2">계</th>
+                      <th rowspan="2">주휴수당</th>
+                      <th rowspan="2">법정휴일</th>
+                      <th colspan="2">일연장</th>
+                      <th colspan="2">주연장</th>
+                      <th rowspan="2">야간근로 가산임금</th>
+                      <th colspan="2">휴일근로</th>
+                      <th rowspan="2">연차수당</th>
+                      <th rowspan="2">계</th>
+                      <th rowspan="2">공제내역</th>
+                      <th rowspan="2">합계</th>
+                  </tr>
+                  <tr class="tableListHeadTr">
+                      <!-- 일연장 -->
+                      <th>기본임금</th>
+                      <th>가산임금</th>
+                      <!-- 주연장 -->
+                      <th>기본임금</th>
+                      <th>가산임금</th>
+                      <!-- 휴일근로 -->
+                      <th>기본임금</th>
+                      <th>가산임금</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  
+              </tbody>
+          </table>
+        </div>
+        
+        <div id="popup" class="popup">
+          <div class="popupContent">
+            <div id="printableArea">
+              <!-- 팝업 내용 (급여명세서) -->
+              <table class="popupTable">
+                <thead>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                        <th>소속</th>
+                        <th>부서</th>
+                        <th>직책</th>
+                        <th>성명</th>
                     </tr>
-                  </tbody>
-              </table>
-              
-            </div>
-            </form>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>법인 승은의료</td>
+                        <td>관리부</td>
+                        <td>청소원</td>
+                        <td>이영숙</td>
+                    </tr>
+                </tbody>
+                <thead>
+                  <tr>
+                      <th colspan="2">지급 내역</th>
+                      <th colspan="2">공제 내역</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>기본급</td>
+                      <td>692,683</td>
+                      <td>소득세</td>
+                      <td>-</td>
+                  </tr>
+                  <tr>
+                      <td>직책수당</td>
+                      <td>-</td>
+                      <td>주민세</td>
+                      <td>-</td>
+                  </tr>
+                  <tr>
+                      <td>식대</td>
+                      <td>100,000</td>
+                      <td>고용보험</td>
+                      <td>4,950</td>
+                  </tr>
+                  <tr>
+                      <td>차량유지</td>
+                      <td>-</td>
+                      <td>건강보험</td>
+                      <td>26,500</td>
+                  </tr>
+                  <tr>
+                      <td>주휴수당</td>
+                      <td>158,537</td>
+                      <td>장기요양</td>
+                      <td>1,740</td>
+                  </tr>
+                  <tr>
+                      <td>법정휴일</td>
+                      <td>4,065</td>
+                      <td>국민연금</td>
+                      <td>40,500</td>
+                  </tr>
+                  <tr>
+                      <td>연장기본</td>
+                      <td>-</td>
+                      <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                      <td>연장가산</td>
+                      <td>-</td>
+                      <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                      <td>야간가산</td>
+                      <td>-</td>
+                      <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                      <td>연차수당</td>
+                      <td>45,732</td>
+                      <td colspan="2"></td>
+                  </tr>
+                  <tr class="total">
+                      <td>지급합계</td>
+                      <td>1,001,020</td>
+                      <td>공제합계</td>
+                      <td>73,690</td>
+                  </tr>
+                  <tr class="total">
+                      <td>차인지급액</td>
+                      <td>927,330</td>
+                      <td colspan="2"></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="printClose">
+            <button class="print" onclick="printDiv('printableArea')">인쇄</button>
+            <button class="close" onclick="closePopup()">닫기</button>
+          </div>
+        </div>
+        </div>
+    </div>
     </div>
 
     <script>
@@ -575,6 +757,30 @@
 
       window.onload = adjustScrollbarVisibility;
       window.onresize = adjustScrollbarVisibility;
+      
+      function openPopup() {
+        document.getElementById("popup").style.display = "block";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+
+      function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+      }
+
+      window.onload = adjustScrollbarVisibility;
+      window.onresize = adjustScrollbarVisibility;
     </script>
+    <script src="/kingbus/salary/js/global.js"></script>
+    <script src="/kingbus/salary/js/sidebar.js"></script>
   </body>
 </html>

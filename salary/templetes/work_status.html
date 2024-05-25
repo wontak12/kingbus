@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="salary_table.css" />
-    <link rel="stylesheet" href="css/global.css">
-
+    <link rel="stylesheet" href="/kingbus/salary/css/global.css">
+    <!-- <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/sidemenu.css">
+    <link rel="stylesheet" href="work_status.css"> -->
+    <link rel="stylesheet" href="/kingbus/salary/work_status.css">
+    
     <title>DEV</title>
   </head>
   <body>
+    <div class="trp">
+
     <!--sidemenu-->
     <div class="Sidemenu">
       <!--sidemenuLogo-->
@@ -265,16 +270,16 @@
                 <a href="/HR/member" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">급여관리</li>
                 </a>
-                <a href="/salary/salary_name.html" class="sideMenuNav2Link">
+                <a href="/templetes/salary/salary_name.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">사원명부</li>
                 </a>
-                <a href="/salary/work_status.html" class="sideMenuNav2Link">
+                <a href="/templetes/salary/work_status.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">근무현황</li>
                 </a>
-                <a href="/salary/salary_table.html" class="sideMenuNav2Link">
+                <a href="/templetes/salary_table.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">임금테이블</li>
                 </a>
-                <a href="/HR/salary/outsourcing" class="sideMenuNav2Link">
+                <a href="/templetes/salary_table_calculator.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">임금계산기</li> <!--전이사, 최고관리자만-->
                 </a>
                 <a href="/HR/team" class="sideMenuNav2Link">
@@ -493,11 +498,14 @@
       </div>
     </div>
     <!--sidemenu done-->
+
     <div class="MainContainer">
+
+      <!--header-->
       <div class="Header">
         <div class="HeaderTitle">
           <!-- 페이지별 Title 변경 -->
-          SALARY
+          WorkStatus
         </div>
         <!--trp HeaderProfile-->
         <div class="profile">
@@ -512,7 +520,7 @@
         </div>
 
         <div class="profileBox" style="display: none">
-          <div class="profileMenuCell">
+          <div class="profilesMenuCell">
             <img
               src="/static/images/createUserIcon.png?v=0.1236"
               alt="설정 아이콘"
@@ -538,246 +546,320 @@
         </div>
         <!--trp HeaderTitle-->
       </div>
-      
+      <!--header done-->
+
       <div class="MainContentsContainer">
-        <div class="searchContainer">
-            <form class="searchForm">
-                <label for="" class="searchFormLabel">날짜 : </label>
-                <input autocomplete="off" name='month' value="2024-05" type="month" class="searchFormInput searchFormInputMonth">
-                <label for="" class="searchFormLabel">이름 : </label>
-                <input autocomplete="off" name="name" value="" type="text" class="searchFormInput">
-                <input type="submit" class="searchFormSearchBtn" value="검색">
-            </form>
-            <div class="popupAreaBox">
-              <div class="popupAreaBoxBtn" onclick="openPopup()">급여명세서</div>
-          </div>
-            <!-- <div class="popupAreaBox">
-                <div class="popupAreaBoxBtn" onclick="salaryPrint()">급여현황</div>
-            </div> -->
-        </div>
-        <form method="post" action="/HR/salary/edit" class="salaryContainer">
-          <input type="hidden" name="csrfmiddlewaretoken" value="zcTCPQgOThRILvXsR9zofAvD8qYhOgo6juTSgPgqjRvQH7Q3FHI7OedkIjwc2f7X">
-          <input type="hidden" name="month" value="2024-05">
-        </form>
-          <!-- <input class="btnModules salarySaveBtn" type="submit" value="저장">
-          <div class="btnModules salarySaveBtn salarySaveBtn2" onclick="loadPrevMonthlyBase()">불러오기</div> -->
-        <div class="tableContainer">  
-          <table class="tableList">
-              <thead>
-                  <tr class="tableListSuperHeadTr">
-                      <th rowspan="2"><input type="checkbox" class="amountCheckAll"></th>
-                      <th rowspan="2">번호</th>
-                      <th rowspan="2">이름</th>
-                      <th rowspan="2">구분</th>
-                      <th rowspan="2">입사일자</th>
-                      <th rowspan="2">퇴사일자</th>
-                      <th rowspan="2">주민등록번호</th>
-                      <th rowspan="2">기본시급</th>
-                      <th rowspan="2">통상시급</th>
-                      <th rowspan="2">기본급</th>
-                      <th rowspan="2">직책수당</th>
-                      <th rowspan="2">식대</th>
-                      <th rowspan="2">계</th>
-                      <th rowspan="2">주휴수당</th>
-                      <th rowspan="2">법정휴일</th>
-                      <th colspan="2">일연장</th>
-                      <th colspan="2">주연장</th>
-                      <th rowspan="2">야간근로 가산임금</th>
-                      <th colspan="2">휴일근로</th>
-                      <th rowspan="2">연차수당</th>
-                      <th rowspan="2">계</th>
-                      <th rowspan="2">공제내역</th>
-                      <th rowspan="2">합계</th>
-                  </tr>
-                  <tr class="tableListHeadTr">
-                      <!-- 일연장 -->
-                      <th>기본임금</th>
-                      <th>가산임금</th>
-                      <!-- 주연장 -->
-                      <th>기본임금</th>
-                      <th>가산임금</th>
-                      <!-- 휴일근로 -->
-                      <th>기본임금</th>
-                      <th>가산임금</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  
-              </tbody>
-          </table>
-        </div>
-        <div id="popup" class="popup">
-          <div class="popupContent">
-            <div id="printableArea">
-              <!-- 팝업 내용 (급여명세서) -->
-              <table class="popupTable">
-                <thead>
-                    <tr>
-                        <th>소속</th>
-                        <th>부서</th>
-                        <th>직책</th>
-                        <th>성명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>법인 승은의료</td>
-                        <td>관리부</td>
-                        <td>청소원</td>
-                        <td>이영숙</td>
-                    </tr>
-                </tbody>
-                <thead>
-                  <tr>
-                      <th colspan="2">지급 내역</th>
-                      <th colspan="2">공제 내역</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>기본급</td>
-                      <td>692,683</td>
-                      <td>소득세</td>
-                      <td>-</td>
-                  </tr>
-                  <tr>
-                      <td>직책수당</td>
-                      <td>-</td>
-                      <td>주민세</td>
-                      <td>-</td>
-                  </tr>
-                  <tr>
-                      <td>식대</td>
-                      <td>100,000</td>
-                      <td>고용보험</td>
-                      <td>4,950</td>
-                  </tr>
-                  <tr>
-                      <td>차량유지</td>
-                      <td>-</td>
-                      <td>건강보험</td>
-                      <td>26,500</td>
-                  </tr>
-                  <tr>
-                      <td>주휴수당</td>
-                      <td>158,537</td>
-                      <td>장기요양</td>
-                      <td>1,740</td>
-                  </tr>
-                  <tr>
-                      <td>법정휴일</td>
-                      <td>4,065</td>
-                      <td>국민연금</td>
-                      <td>40,500</td>
-                  </tr>
-                  <tr>
-                      <td>연장기본</td>
-                      <td>-</td>
-                      <td colspan="2"></td>
-                  </tr>
-                  <tr>
-                      <td>연장가산</td>
-                      <td>-</td>
-                      <td colspan="2"></td>
-                  </tr>
-                  <tr>
-                      <td>야간가산</td>
-                      <td>-</td>
-                      <td colspan="2"></td>
-                  </tr>
-                  <tr>
-                      <td>연차수당</td>
-                      <td>45,732</td>
-                      <td colspan="2"></td>
-                  </tr>
-                  <tr class="total">
-                      <td>지급합계</td>
-                      <td>1,001,020</td>
-                      <td>공제합계</td>
-                      <td>73,690</td>
-                  </tr>
-                  <tr class="total">
-                      <td>차인지급액</td>
-                      <td>927,330</td>
-                      <td colspan="2"></td>
-                  </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="printClose">
-            <button class="print" onclick="printDiv('printableArea')">인쇄</button>
-            <button class="close" onclick="closePopup()">닫기</button>
-          </div>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <script>
-      function adjustScrollbarVisibility() {
-        const scrollSection = document.getElementById("scrollSection");
-        const containerWidth = scrollSection.offsetWidth;
-        const contentWidth = scrollSection.scrollWidth;
-
-        if (contentWidth > containerWidth) {
-          scrollSection.style.overflowX = "auto";
-        } else {
-          scrollSection.style.overflowX = "hidden";
-        }
-      }
-
-      window.onload = adjustScrollbarVisibility;
-      window.onresize = adjustScrollbarVisibility;
+        <div class="search-Container">
+          <form class="search-Form">
+              <label for="" class="search-Form_label">날짜 : </label>
+              <input autocomplete="off" name='month' value="2024-05" type="month" class="search-Form_input search-Form_input-Month">
+              <label for="" class="search-Form_label">이름 : </label>
+              <input autocomplete="off" name="name" value="" type="text" class="search-Form_input">
+              <input type="submit" class="search-Form_search-btn" value="검색">
+          </form>
+      </div>
       
-      function openPopup() {
-        document.getElementById("popup").style.display = "block";
-      }
+      <div id="scrollSection" class="table-container">
+          <table class="table-list_super-head-tr th">
+          <thead class="tableHead">
+              <tr class="header-row">
+                  <th rowspan="3" class="StickythFirst  sticky">사번</th>
+                  <th rowspan="3" class="StickythSecond sticky">이름</th>
+                  <th rowspan="3" class="StickythThird sticky">근무시간</th>
+                  <th colspan="31" class="dateColumn">날짜</th>
+                  <th rowspan="3" colspan="4">근태</th>
+                  <th rowspan="3" >확인 서명</th>
+              </tr>
+              <tr class="sub-header-row">
+                  <th class="dateColumn">1</th>
+                  <th class="dateColumn">2</th>
+                  <th class="dateColumn">3</th>
+                  <th class="dateColumn">4</th>
+                  <th class="dateColumn">5</th>
+                  <th class="dateColumn">6</th>
+                  <th class="dateColumn">7</th>
+                  <th class="dateColumn">8</th>
+                  <th class="dateColumn">9</th>
+                  <th class="dateColumn">10</th>
+                  <th class="dateColumn">11</th>
+                  <th class="dateColumn">12</th>
+                  <th class="dateColumn">13</th>
+                  <th class="dateColumn">14</th>
+                  <th class="dateColumn">15</th>
+                  <th class="dateColumn">16</th>
+                  <th class="dateColumn">17</th>
+                  <th class="dateColumn">18</th>
+                  <th class="dateColumn">19</th>
+                  <th class="dateColumn">20</th>
+                  <th class="dateColumn">21</th>
+                  <th class="dateColumn">22</th>
+                  <th class="dateColumn">23</th>
+                  <th class="dateColumn">24</th>
+                  <th class="dateColumn">25</th>
+                  <th class="dateColumn">26</th>
+                  <th class="dateColumn">27</th>
+                  <th class="dateColumn">28</th>
+                  <th class="dateColumn">29</th>
+                  <th class="dateColumn">30</th>
+                  <th class="dateColumn">31</th>
+              </tr>
+              <tr>
+                <th class="dateColumn">월</th>
+                  <th class="dateColumn">화</th>
+                  <th class="dateColumn">수</th> 
+                  <th class="dateColumn">목</th>
+                  <th class="dateColumn">금</th>
+                  <th class="dateColumn">토</th>
+                  <th class="dateColumn">일</th>
+                  <th class="dateColumn">월</th>
+                  <th class="dateColumn">화</th>
+                  <th class="dateColumn">수</th> 
+                  <th class="dateColumn">목</th>
+                  <th class="dateColumn">금</th>
+                  <th class="dateColumn">토</th>
+                  <th class="dateColumn">일</th>
+                  <th class="dateColumn">월</th>
+                  <th class="dateColumn">화</th>
+                  <th class="dateColumn">수</th> 
+                  <th class="dateColumn">목</th>
+                  <th class="dateColumn">금</th>
+                  <th class="dateColumn">토</th>
+                  <th class="dateColumn">일</th>
+                  <th class="dateColumn">월</th>
+                  <th class="dateColumn">화</th>
+                  <th class="dateColumn">수</th> 
+                  <th class="dateColumn">목</th>
+                  <th class="dateColumn">금</th>
+                  <th class="dateColumn">토</th>
+                  <th class="dateColumn">일</th>
+                  <th class="dateColumn">월</th>
+                  <th class="dateColumn">화</th>
+                  <th class="dateColumn">수</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- 직원 데이터를 반복해서 채워 넣음 -->
+              <tr class="1">
+                  <tr>
+                      <td rowspan="5" class="StickythFirst sticky">001</td>
+                      <td class="StickythSecond sticky">홍길동</td>
+                      <td class="StickythThird sticky">출근</td>
+                      <!-- 실제 근무 데이터 -->
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>05:30</td>
+                      <td>근무</td>
+                      <td>26</td>
+                      <TD>연차</TD>
+                      <td>0</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td class="StickythSecond sticky"></td>
+                      <td class="StickythThird sticky">퇴근</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>21:00</td>
+                      <td>결근</td>
+                      <td>0</td>
+                      <TD>경조</TD>
+                      <td>0</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                    <td class="StickythSecond sticky">승무원</td>
+                    <td class="StickythThird sticky">체류</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>05:00</td>
+                    <td></td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>05:00</td>
+                    <td></td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>05:00</td>
+                    <td></td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>05:00</td>
+                    <td></td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>09:00</td>
+                    <td>주휴</td>
+                    <td>0</td>
+                    <TD>병가</TD>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="StickythSecond sticky"></td>
+                    <td class="StickythThird sticky">야간</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>비번</td>
+                    <td>0</td>
+                    <TD>공휴</TD>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="StickythSecond sticky">팀장</td>
+                    <td class="StickythThird sticky">구분</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>무휴</td>
+                    <td>0</td>
+                    <TD>합계</TD>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+              </tr>
+              
+              <!-- 다른 직원들 데이터 -->
+          </tbody>
+          </table>
+      </div>
+      </div> 
 
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
+    </div>
 
-      function printDiv(divName) {
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
+    </div>
 
-        document.body.innerHTML = printContents;
 
-        window.print();
 
-        document.body.innerHTML = originalContents;
-      }
 
-      window.onload = adjustScrollbarVisibility;
-      window.onresize = adjustScrollbarVisibility;
-    </script>
+
+
+    <script src="/kingbus/salary/js/global.js"></script>
+    <script src="/kingbus/salary/js/sidebar.js"></script>
   </body>
 </html>
