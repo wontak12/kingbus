@@ -217,4 +217,14 @@ a{
     padding: 3rem;
     padding-top: 2rem;
   }
+  @media all and (min-width:1460px) and (max-width: 1600px) {
+    html {
+      font-size: 52%;
+    }
+  }
   
+  @media all and (min-width:1024px) and (max-width: 1460px) {
+    html {
+      font-size: 46.8%;
+    }
+  }

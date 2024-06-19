@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/kingbus/salary/salary_name.css" />
-    <link rel="stylesheet" href="/kingbus/salary/css/global.css">
+    <link rel="stylesheet" href="/kingbus/salary/css/global.css"/>
+    <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_search.css">
+    <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_table.css">
+    <!-- <link rel="stylesheet" href="css/main-container.css"> -->
     <title>DEV</title>
   </head>
   <body>
+    <div class="trp">
+
     <!--sidemenu-->
     <div class="Sidemenu">
       <!--sidemenuLogo-->
@@ -24,7 +28,7 @@
             <li class="nav1BoxMenu">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/calendar.png?v=0.1236"
+                src="/kingbus/salary/images/calendar.png?v=0.1236"
                 alt="일정 아이콘"
               />
               <a href="/service" class="nonDepth2Menu">일정</a>
@@ -34,7 +38,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/notice.png?v=0.1236"
+                src="/kingbus/salary/images/notice.png?v=0.1236"
                 alt="공지사항 아이콘"
               />
               <div>공지사항</div>
@@ -73,7 +77,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/dispatchSystem.png?v=0.1236"
+                src="/kingbus/salary/images/dispatchSystem.png?v=0.1236"
                 alt="배차시스템 아이콘"
               />
               <div>배차관리</div>
@@ -187,7 +191,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/HRManagement.png?v=0.1236"
+                src="/kingbus/salary/images/HRManagement.png?v=0.1236"
                 alt="인사관리 아이콘"
               />
               <div>인사관리</div>
@@ -235,7 +239,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/HRManagement.png?v=0.1236"
+                src="/kingbus/salary/images/HRManagement.png?v=0.1236"
                 alt="인사관리 아이콘"
               />
               <div>급여관리</div>
@@ -261,23 +265,24 @@
             </li>
             <div class="sideMenuNav2Box">
               <ul class="sideMenuNav2">
-                <!-- <a href="/HR/member" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여관리</li>
-                </a> -->
-                <a href="/kingbus/salary/templetes/salary_name.html" class="sideMenuNav2Link">
+                
+                <!-- <a href="/salary/salary_name.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">사원명부</li>
-                </a>
-                <a href="/kingbus/salary/templetes/work_status.html" class="sideMenuNav2Link">
+                </a> -->
+                <a href="/salary/work_status.html" class="sideMenuNav2Link">
                   <li class="sideMenuNav2Menu">근무현황</li>
                 </a>
-                <a href="/kingbus/salary/templetes/salary_table.html" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">임금테이블</li>
+                <a href="/salary/salary_table.html" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">급여관리(현재)</li>
                 </a>
-                <a href="/kingbus/salary/templetes/salary_table_calculator.html" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">임금계산기</li> <!--전이사, 최고관리자만-->
+                <a href="/HR/salary/outsourcing" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">급여관리(변경)</li> <!--전이사, 최고관리자만-->
                 </a>
                 <a href="/HR/team" class="sideMenuNav2Link">
-                  <li class="sideMenuNav2Menu">급여설명</li>
+                  <li class="sideMenuNav2Menu">급여관리(용역)</li>
+                </a>
+                <a href="/HR/team" class="sideMenuNav2Link">
+                  <li class="sideMenuNav2Menu">급여관리(관리자)</li>
                 </a>
                 
               </ul>
@@ -287,7 +292,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/accountingSystem.png?v=0.1236"
+                src="/kingbus/salary/images/accountingSystem.png?v=0.1236"
                 alt="경리시스템 아이콘"
               />
               <div>매출관리</div>
@@ -335,7 +340,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/vehicleManagement.png?v=0.1236"
+                src="/kingbus/salary/images/vehicleManagement.png?v=0.1236"
                 alt="차량관리 아이콘"
               />
               <div>차량관리</div>
@@ -383,7 +388,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/document.png?v=0.1236"
+                src="/kingbus/salary/images/document.png?v=0.1236"
                 alt="공지사항 아이콘"
               />
               <div>서류관리</div>
@@ -422,7 +427,7 @@
             <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/document.png?v=0.1236"
+                src="/kingbus/salary/images/document.png?v=0.1236"
                 alt="공지사항 아이콘"
               />
               <div>민원관리</div>
@@ -461,7 +466,7 @@
             <li class="nav1BoxMenu">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/calendar.png?v=0.1236"
+                src="/kingbus/salary/images/calendar.png?v=0.1236"
                 alt="일정 아이콘"
               />
               <a href="/member/setting/client" class="nonDepth2Menu"
@@ -473,7 +478,7 @@
             <li class="nav1BoxMenu">
               <img
                 class="nav1BoxMenuImg"
-                src="/static/images/calendar.png?v=0.1236"
+                src="/kingbus/salary/images/calendar.png?v=0.1236"
                 alt="일정 아이콘"
               />
               <a href="/member/setting" class="nonDepth2Menu">항목 관리</a>
@@ -493,78 +498,126 @@
     </div>
     <!--sidemenu done-->
 
-      <div class="MainContentsContainer">
-        <div class="searchContainer">
-            <form class="searchForm">
-                <label for="" class="searchFormLabel">날짜 : </label>
-                <input autocomplete="off" name='month' value="2024-05" type="month" class="searchFormInput searchFormInputMonth">
-                <label for="" class="searchFormLabel">이름 : </label>
-                <input autocomplete="off" name="name" value="" type="text" class="searchFormInput">
-                <input type="submit" class="searchFormSearchBtn" value="검색">
-            </form>
-            <!-- <div class="popupAreaBox">
-                <div class="popupAreaBoxBtn" onclick="salaryPrint()">급여현황</div>
-            </div> -->
-        </div>
-        
-          <div class="scrollingTableListHeader">
-              <table class="tableList">
-                  <thead>
-                      <tr class="tableListHeadTr">
-                          <td class="tableListHeadTrTd">
-                              <input type="checkbox" class="amountCheckAll">
-                          </td>
-                          <td class="tableListHeadTrTd">번호</td>
-                          <td class="tableListHeadTrTd">이름</td>
-                          <td class="tableListHeadTrTd">구분</td>
-                          <td class="tableListHeadTrTd">입사일자</td>
-                          <td class="tableListHeadTrTd">퇴사일자</td>
-                          <td class="tableListHeadTrTd">주민등록번호</td>
-                          <td class="tableListHeadTrTd">연령</td>
-                          <td class="tableListHeadTrTd">본봉</td>
-                          <td class="tableListHeadTrTd">직책수당</td>
-                          <td class="tableListHeadTrTd">식대</td>
-                          <td class="tableListHeadTrTd">계</td>
-                          <td class="tableListHeadTrTd">기본시급</td>
-                          <td class="tableListHeadTrTd">통상시급</td>
-                          <td class="tableListHeadTrTd">공제</td>
-                          <td class="tableListHeadTrTd">합계</td>
-                          <td class="tableListHeadTrTd">은행</td>
-                          <td class="tableListHeadTrTd">계좌번호</td>
-                          <td class="tableListHeadTrTd">예금주</td>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-              </table>
-              
-            </div>
-            </form>
-    </div>
+    <!--maincontainer-->
+    <div class="MainContainer">
 
+      <!--header-->
+      <div class="Header">
+        <div class="HeaderTitle">
+          <!-- 페이지별 Title 변경 -->
+          SALARY
+        </div>
+        <!--trp HeaderProfile-->
+        <div class="profile">
+          <span class="userName">관리자</span>
+          <div>
+            <span>님</span>
+            <img
+              src="/kingbus/salary/images/profileArrow.png?v=0.1236"
+              alt="아래 화살표 아이콘"
+            />
+          </div>
+        </div>
+
+        <div class="profileBox" style="display: none">
+          <div class="profilesMenuCell">
+            <img
+              src="/kingbus/salary/images/createUserIcon.png?v=0.1236"
+              alt="설정 아이콘"
+            />
+            <span class="profileMenuName">아이디 변경</span>
+          </div>
+          <div class="profileMenuCell">
+            <img
+              src="/kingbus/salary/images/passwordIcon.png?v=0.1236"
+              alt="비밀번호 변경"
+            />
+            <span class="profileMenuName">비밀번호 변경</span>
+          </div>
+          <div class="profileMenuCell">
+            <a href="/member/logout">
+              <img
+                src="/kingbus/salary/images/logoutIcon.png?v=0.1236"
+                alt="로그아웃"
+              />
+              <span class="profileMenuName">로그아웃</span>
+            </a>
+          </div>
+        </div>
+        <!--trp HeaderTitle-->
+      </div>
+      <!--header done-->
+
+ 
+      <div class="MainContentsContainer">
+
+        <!--검색창-->
+        <div class="searchContainer">
+
+          <!--검색폼-->         
+            <form action="" class="searchForm">
+              <label for="" class="searchFormLabel">날짜 : </label>
+              <input type="month" name="month" value="2024" class="searchFormInput searchFormInputMonth">
+              <label for="" class="searchFormLabel">이름 : </label>
+              <input name="name" value="" type="text" class="searchFormInput">
+              <select name="type" id="type" class="searchFormInput searchFormInputSelect">
+                <option value="전체">전체</option>
+                <option value="4시간 이하">4시간 이하</option>
+                <option value="4시간 초과 6시간 이하">4시간 초과 6시간 이하</option>
+                <option value="6시간 초과 8시간 이하">6시간 초과 8시간 이하</option>
+                <option value="8시간 초과">8시간 초과</option>
+              </select>
+              <input type="submit" class="searchFormSearchBtn" value="검색">
+            </form>
+          <!--검색폼 done-->
+
+          <!--급여현황-->
+          <div class="popupAreaBox">
+            <div class="popupAreaBoxBtn" onclick="salaryPrint()">급여현황</div>
+          </div>
+          <!--급여현황 done-->
+        </div>
+        <!--검색창 끝-->
+
+        <!--salaryContainer-->
+        <form class="salaryContainer" method="post">
+          <div class="scrollingTableListHeader">
+            <table class="tableList">
+                <thead>
+                    <tr class="tableListHeadTr">
+                        <td class="tableListHeadTrTd">
+                            <input type="checkbox" class="amountCheckAll">
+                        </td>
+                        <td class="tableListHeadTrTd">번호</td>
+                        <td class="tableListHeadTrTd">이름</td>
+                        <td class="tableListHeadTrTd">구분</td>
+                        <td class="tableListHeadTrTd">입사일자</td>
+                        <td class="tableListHeadTrTd">근무시간</td>
+                        <td class="tableListHeadTrTd">시급</td>
+                        <td class="tableListHeadTrTd">근속수당</td>
+                        <td class="tableListHeadTrTd">연차수당</td>
+                        <td class="tableListHeadTrTd">성과급</td>
+                        <td class="tableListHeadTrTd">식대</td>
+                        <td class="tableListHeadTrTd">출근수당</td>
+                        <td class="tableListHeadTrTd">퇴근수당</td>
+                        <td class="tableListHeadTrTd">일반수당</td>
+                        <td class="tableListHeadTrTd">업무수당</td>
+                        <td class="tableListHeadTrTd">추가수당</td>
+                        <td class="tableListHeadTrTd">공제</td>
+                        <td class="tableListHeadTrTd">합계</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!--maincontainer done-->
+
+
+
+    </div>
     <script src="/kingbus/salary/js/global.js"></script>
     <script src="/kingbus/salary/js/sidebar.js"></script>
-    
   </body>
 </html>
