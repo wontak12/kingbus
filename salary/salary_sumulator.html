@@ -505,11 +505,11 @@
       <div class="Header">
         <div class="HeaderTitle">
           <!-- 페이지별 Title 변경 -->
-          SALARY
+          임금테이블
         </div>
         <!--trp HeaderProfile-->
         <div class="profile">
-          <span class="userName">관리자</span>
+          <span class="userName">전조술</span>
           <div>
             <span>님</span>
             <img
@@ -579,37 +579,207 @@
         </div>
         <!--검색창 끝-->
 
-        <!--salaryContainer-->
-        <form class="salaryContainer" method="post">
-          <div class="scrollingTableListHeader">
-            <table class="tableList">
-                <thead>
-                    <tr class="tableListHeadTr">
-                        <td class="tableListHeadTrTd">
-                            <input type="checkbox" class="amountCheckAll">
-                        </td>
-                        <td class="tableListHeadTrTd">번호</td>
-                        <td class="tableListHeadTrTd">이름</td>
-                        <td class="tableListHeadTrTd">구분</td>
-                        <td class="tableListHeadTrTd">입사일자</td>
-                        <td class="tableListHeadTrTd">근무시간</td>
-                        <td class="tableListHeadTrTd">시급</td>
-                        <td class="tableListHeadTrTd">근속수당</td>
-                        <td class="tableListHeadTrTd">연차수당</td>
-                        <td class="tableListHeadTrTd">성과급</td>
-                        <td class="tableListHeadTrTd">식대</td>
-                        <td class="tableListHeadTrTd">출근수당</td>
-                        <td class="tableListHeadTrTd">퇴근수당</td>
-                        <td class="tableListHeadTrTd">일반수당</td>
-                        <td class="tableListHeadTrTd">업무수당</td>
-                        <td class="tableListHeadTrTd">추가수당</td>
-                        <td class="tableListHeadTrTd">공제</td>
-                        <td class="tableListHeadTrTd">합계</td>
-                    </tr>
-                </thead>
-            </table>
+        <!--임금테이블-->
+        <div class="contentsAreaBox scrollDiv">
+
+          <div class="orderListMain">
+            <!--고정헤더-->
+            <div class="orderListTableHead">
+              <div class="orderListMainContents orderListMain0"><input type="checkbox"></div>
+              <div class="orderListMainContents orderListMain1">번호</div>
+              <div class="orderListMainContents orderListMain2">이름</div>
+              <div class="orderListMainContents orderListMain2 orderListMain3">직책</div>
+            </div>
+            <!--고정헤더 done-->
+            
+            <!--고정요소-->
+            <div class="orderListItem">
+              <div class="orderListMainContents orderListMain0"><input type="checkbox"></div>
+              <div class="orderListMainContents orderListMain1">1</div>
+              <div class="orderListMainContents orderListMain2">김원탁</div>
+              <div class="orderListMainContents orderListMain2 orderListMain3">팀장</div>
+            </div>
+
+            <div class="orderListItem">
+              <div class="orderListMainContents orderListMain0"><input type="checkbox"></div>
+              <div class="orderListMainContents orderListMain1">1</div>
+              <div class="orderListMainContents orderListMain2">김원탁</div>
+              <div class="orderListMainContents orderListMain2 orderListMain3">팀장</div>
+            </div>
+            <!--고정요소 done-->
+
+          </div>
+          
+          <div class="orderListSub orderListScrollBox">
+            <div class="tableBody table">
+              <div class="thead">
+                <div class="theadDate">입사일자</div>
+                <div class="theadWorkTime">근무시간</div>
+                <div class="theadBasic">기본시급</div>
+                <div class="theadNormal">통상시급</div>
+
+                <!--통상급여-->
+                <div class="theadOrdinarySalary">
+                  <div class="theadOrdinarySalaryTitle">통상급여</div>
+                  <div class="theadOrdinarySalaryContent">
+                    <div>임금</div>
+                    <div>직책수당</div>
+                    <div>식 대</div>
+                    <div>근속수당</div>
+                    <div class="theadOrdinarySalaryContentLast">계</div>
+                  </div>
+                </div>
+                <!--통상급여 done-->
+
+                <!--법정수당-->
+                <div class="theadLegalAllowance"> 
+                  <div class="theadLegalAllowanceTitle">법정수당</div>
+                  <div class="theadLegalAllowanceContent">
+                    <div>주휴수당</div>
+                    <div>법정휴일</div>
+                    <div class="theadLegalAllowanceContentDouble">
+                      <div class="theadLegalAllowanceContentDoubleTitle">주 연장</div>
+                      <div class="theadLegalAllowanceContentDoubleContent">
+                        <div class="theadLegalAllowanceContentDoubleContentFirst">기본임금</div>
+                        <div>가산임금</div>
+                      </div>
+                    </div>
+                    <div>야간근로<br>가산임금</div>
+                    <div class="theadLegalAllowanceContentDouble">
+                      <div class="theadLegalAllowanceContentDoubleTitle">휴일근로</div>
+                      <div class="theadLegalAllowanceContentDoubleContent">
+                        <div class="theadLegalAllowanceContentDoubleContentFirst">기본임금</div>
+                        <div>가산임금</div>
+                      </div>
+                    </div>
+                    <div>연차수당</div>
+                    <div class="theadLegalAllowanceContentLast">계</div>
+                  </div>
+                </div>
+                <!--법정수당 done-->
+
+                <div class="theadSum">합계</div>
+                <!--보험료산정기준-->
+                  <div class="theadInsurance">
+                    <div class="theadInsuranceTitle">보험료산정기준</div>
+                    <div class="theadInsuranceContent">
+                      <div class="theadInsuranceContentFirst">건강보험</div>
+                      <div>국민연금</div>
+                    </div>
+                </div>
+                <!--보험료산정기준 done-->
+                
+                <!--공제내역-->
+                <div class="theadDeductionDetails">
+                  <div class="theadDeductionDetailsTitle">공제 내역</div>
+                  <div class="theadDeductionDetailsContent">
+                    <div>갑근세</div>
+                    <div>주민세</div>
+                    <div>고용보험</div>
+                    <div>건강보험</div>
+                    <div>장기요양</div>
+                    <div>국민연금</div>
+                    <div>기타</div>
+                    <div class="theadDeductionDetailsContentLast">공제합계</div>
+                  </div>
+                </div>
+                <!--공제내역 done-->
+                <div class="theadAdditionalAllowance">추가수당</div>
+                <div class="theadSum theadThLast">합계</div>
+              </div>
+
+              <div class="tbody">
+                <div class="tbodyItem">
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance"></div>
+                      <div class="tbodySum tbodySumLast"></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance"></div>
+                      <div class="tbodySum tbodySumLast"></div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </form>
+        <!--임금테이블 done-->
+
       </div>
     </div>
     <!--maincontainer done-->
