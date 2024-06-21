@@ -46,12 +46,14 @@
     margin-left: 2rem;
 }
 .popupAreaBox {
-    display: flex;
-    justify-content: space-between;
+    width: 55.6rem;
+    display: flex;;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
 }
 .popupAreaBoxBtn{
+    width: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,4 +66,7 @@
     font-size: 1.4rem;
     cursor: pointer;
     margin-left: 1rem;
+}
+.blue{
+    background-color: #2E64FE;
 }
