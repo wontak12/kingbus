@@ -1,0 +1,120 @@
+.sumAreaBox {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    margin-top: 4rem;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+    background-color: white;
+}
+.orderSumAreaBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 21.3rem;
+    height: 100%;
+    border-right: 0.1rem solid #CDCDCE;
+    box-sizing: border-box;
+}
+.sumBodyTable{
+
+    height: 100%;
+    width: 200%;
+    border-spacing: 0;
+    box-sizing: border-box;
+    table-layout: fixed;
+}
+
+.sumItemTr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.9rem;
+    border-bottom: 0.1rem solid #CDCDCE;
+}
+
+.sumItemTrTd{
+    height: 100%;
+    width: 5.6727%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumItemTr > * {
+    height: 100%;
+}
+
+.sumDate{
+    width: 9.8182%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumWorkTime, .sumBasic, .sumNormal, .sumSum, .sumAdditionalAllowance{
+    width: 5.6727%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumOrdinarySalary{
+    width: 28.3635%;
+    display: block;
+
+}
+
+.sumOrdinarySalary > *{
+    width: 20%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumLegalAllowance{
+    width: 51.0543%;
+    display: block;
+}
+
+.sumLegalAllowance > *{
+    
+    width: 11.11111111111111%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumInsurance{
+    width: 11.3454%;
+    display: block;
+}
+
+.sumInsurance > *{
+    width: 50%;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumDeductionDetails{
+    width: 45.3816%;
+    display: block;
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumDeductionDetails > *{
+    width: calc(12.5% - 0.1rem);
+    border-right: 0.1rem solid #CDCDCE;
+}
+
+.sumSumLast{
+    border-right: none;
+}
+
+.sumDate,
+.sumWorkTime, .sumBasic, .sumNormal, .sumSum, .sumAdditionalAllowance,
+.sumOrdinarySalary > *,
+.sumLegalAllowance > *,
+.sumInsurance > *,
+.sumDeductionDetails > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subScroll{
+    overflow-y: scroll;
+}

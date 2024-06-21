@@ -1,0 +1,57 @@
+.hourMondeyEditPopup{
+    font-size: 1.4rem;
+    box-shadow: 0 0.2rem 0.4rem rgb(0 0 0 / 16%);
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: none;
+    width: 36rem;
+    height: 38.8rem;
+}
+
+.hourMoneyEditHeader{
+
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 5rem;
+    background-color: #444;
+}
+
+.hourMoneyEditHeader span{
+    margin-left: 1rem;
+}
+    
+.hourMoneyEditBody{
+    margin: 3rem;
+    margin-top: 4rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-direction: column;
+    border-bottom: 0.1rem solid #CDCDCE;
+}
+.hourMoneyEditContentText{
+    text-align: end;
+    width: 12rem;
+}
+.hourMoneyEditContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.BtnArea{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    margin-top: 5rem;
+}
+.moneyPopupAreaBoxBtn{
+    width: 5rem;
+    font-size: 1.6rem;
+}
