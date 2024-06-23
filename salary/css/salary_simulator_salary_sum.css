@@ -9,7 +9,10 @@
     box-sizing: border-box;
     background-color: white;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .orderSumAreaBox{
     display: flex;
     justify-content: center;
@@ -20,7 +23,10 @@
     border-right: 0.1rem solid #CDCDCE;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .sumBodyTable{
 
     height: 100%;

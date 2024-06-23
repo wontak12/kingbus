@@ -36,25 +36,37 @@
     flex-direction: column;
     border-bottom: 0.1rem solid #CDCDCE;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .hourMoneyEditContentText{
     text-align: end;
     width: 12rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .hourMoneyEditContent{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .BtnArea{
     display: flex;
     justify-content: flex-end;
     margin-right: 3rem;
     margin-top: 5rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51bc1de6e5166852f7ac9f93bca03ca1ffae1fda
 .moneyPopupAreaBoxBtn{
     width: 5rem;
     font-size: 1.6rem;
