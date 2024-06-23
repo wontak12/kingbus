@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/kingbus/salary/css/global.css"/>
     <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_search.css">
     <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_table.css">
+    <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_sum.css">
+    <link rel="stylesheet" href="/kingbus/salary/css/salary_simulator_salary_hourEditPopup.css">
     <!-- <link rel="stylesheet" href="css/main-container.css"> -->
     <title>DEV</title>
   </head>
@@ -573,7 +575,16 @@
 
           <!--급여현황-->
           <div class="popupAreaBox">
-            <div class="popupAreaBoxBtn" onclick="salaryPrint()">급여현황</div>
+            
+            <div class="popupAreaBoxBtn blue" onclick="hourEditOpen()">
+              시급 조정
+            </div>
+            <div class="popupAreaBoxBtn" onclick="salaryPrint()">
+              근무현황
+            </div>
+            <div class="popupAreaBoxBtn" onclick="salaryDetailPrint()">
+              급여명세서
+            </div>
           </div>
           <!--급여현황 done-->
         </div>
@@ -869,10 +880,10 @@
                         <div></div>
                         <div></div>
                         <div></div>
-                        <div></div>
+                        <div class="tableEdit"></div>
                       </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
                     </div>
 
                     <div class="tbodyItemTr">
@@ -910,748 +921,754 @@
                         <div></div>
                         <div></div>
                         <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                         <div></div>
                       </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
                     </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
+                    <div class="tbodyItemTr">
+                      <div class="tbodyDate">2024년 5월 15일</div>
+                      <div class="tbodyWorkTime">6시간 30</div>
+                      <div class="tbodyBasic">12000</div>
+                      <div class="tbodyNormal">20000</div>
+                      <div class="tbodyOrdinarySalary" style="display: flex;">
+                        <div>임금</div>
+                        <div>직책수당</div>
+                        <div>식대</div>
+                        <div>근속수당</div>
+                        <div>계</div>
+                      </div>
+                      <div class="tbodyLegalAllowance" style="display: flex;">
+                        <div>주휴수당</div>
+                        <div>법정휴일</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodySum"></div>
+                      <div class="tbodyInsurance" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="tbodyDeductionDetails" style="display: flex;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="tableEdit"></div>
+                      </div>
+                      <div class="tbodyAdditionalAllowance tableEdit"></div>
+                      <div class="tbodySum tbodySumLast "></div>
+                    </div>
+
                     
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
 
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
                     
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
-
-                    <div class="tbodyItemTr">
-                      <div class="tbodyDate">2024년 5월 15일</div>
-                      <div class="tbodyWorkTime">6시간 30</div>
-                      <div class="tbodyBasic">12000</div>
-                      <div class="tbodyNormal">20000</div>
-                      <div class="tbodyOrdinarySalary" style="display: flex;">
-                        <div>임금</div>
-                        <div>직책수당</div>
-                        <div>식대</div>
-                        <div>근속수당</div>
-                        <div>계</div>
-                      </div>
-                      <div class="tbodyLegalAllowance" style="display: flex;">
-                        <div>주휴수당</div>
-                        <div>법정휴일</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodySum"></div>
-                      <div class="tbodyInsurance" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyDeductionDetails" style="display: flex;">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="tbodyAdditionalAllowance"></div>
-                      <div class="tbodySum tbodySumLast"></div>
-                    </div>
+                    
 
                     
 
@@ -1666,10 +1683,116 @@
 
           </div>
           <!--데이터테이블 done-->
+
         </div>
         <!--임금테이블 done-->
 
+        <!--합계-->
+        <div class="sumAreaBox">
+          <div class="orderSumAreaBox">합계</div>
+          <div class="orderListSub orderListScrollBox subScroll">
+            <div class="sumBodyTable">
+              <div class="sumItemTr">
+                <div class="sumDate"></div>
+                <div class="sumWorkTime"></div>
+                <div class="sumBasic"></div>
+                <div class="sumNormal"></div>
+                <div class="sumOrdinarySalary" style="display: flex;">
+                  <div>임금</div>
+                  <div>직책수당</div>
+                  <div>식대</div>
+                  <div>근속수당</div>
+                  <div>계</div>
+                </div>
+                <div class="sumLegalAllowance" style="display: flex;">
+                  <div>주휴수당</div>
+                  <div>법정휴일</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="sumSum"></div>
+                <div class="sumInsurance" style="display: flex;">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="sumDeductionDetails" style="display: flex;">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div class="tableEdit"></div>
+                </div>
+                <div class="sumAdditionalAllowance tableEdit"></div>
+                <div class="sumSum sumSumLast"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--합계 done-->
+
+        <!--시급조정팝업-->
+        <div id="hourMoneyEdit" class="hourMondeyEditPopup">
+          <!--header-->
+          <div class="hourMoneyEditHeader"><span>시급 수정</span></div>
+          <!--header done-->
+
+          <!--시급수정-->
+          <div class="hourMoneyEditBody">
+
+            <div class="hourMoneyEditContent">
+                <label for="" class="hourMoneyEditContentHour">4시간 이하</label>
+                <div class="input-container">
+                    <input type="text" class="hourMoneyEditContentText" placeholder="" oninput="updateValue(this)">
+                    <span class="currency">원</span>
+                </div>
+            </div>
+
+            <div class="hourMoneyEditContent">
+                <label for="" class="hourMoneyEditContentHour">4시간 초과 6시간 이하</label>
+                <div class="input-container">
+                    <input type="text" class="hourMoneyEditContentText" placeholder="" oninput="updateValue(this)">
+                    <span class="currency">원</span>
+                </div>
+            </div>
+
+            <div class="hourMoneyEditContent">
+                <label for="" class="hourMoneyEditContentHour">6시간 초과 8시간 이하</label>
+                <div class="input-container">
+                    <input type="text" class="hourMoneyEditContentText" placeholder="" oninput="updateValue(this)">
+                    <span class="currency">원</span>
+                </div>
+            </div>
+
+            <div class="hourMoneyEditContent">
+                <label for="" class="hourMoneyEditContentHour">8시간 초과</label>
+                <div class="input-container">
+                    <input type="text" class="hourMoneyEditContentText" placeholder="" oninput="updateValue(this)">
+                    <span class="currency">원</span>
+                </div>
+            </div>
+
+        </div>
+          <!--시급수정done-->
+
+          <!--적용, 닫기 버튼-->
+          <div class="BtnArea">
+            <div class="popupAreaBoxBtn moneyPopupAreaBoxBtn blue">적용</div>
+            <div class="popupAreaBoxBtn moneyPopupAreaBoxBtn " onclick="hourEditClose()">닫기</div>
+          </div>
+          <!--적용, 닫기 버튼-->
+
+        </div>
+        <!--시급조정팝업 done-->
+
       </div>
+      
     </div>
     <!--maincontainer done-->
 
@@ -1678,31 +1801,41 @@
     </div>
     <script src="/kingbus/salary/js/global.js"></script>
     <script src="/kingbus/salary/js/sidebar.js"></script>
+    <script src="/kingbus/salary/js/salary_simulator_salary_table.js"></script>
 
     <script>
+
+      // 시급 조정 팝업 오픈
+      const hourEditOpen = () => {
+        document.getElementById("hourMoneyEdit").style.display = "block";
+      };
+      const hourEditClose = () => {
+        document.getElementById("hourMoneyEdit").style.display="none";
+      }
+      //시급 조정 팝업 오픈 끝
+
+      //숫자만 입력되게
       document.addEventListener("DOMContentLoaded", function() {
-          const mainDiv = document.querySelector(".orderListSubScroll");
-          const subDiv = document.querySelector(".orderListSub");
-  
-          let isSyncingMainScroll = false;
-          let isSyncingSubScroll = false;
-  
-          function syncScroll(event) {
-              if (event.target === mainDiv && !isSyncingSubScroll) {
-                  isSyncingMainScroll = true;
-                  subDiv.scrollTop = mainDiv.scrollTop;
-              } else if (event.target === subDiv && !isSyncingMainScroll) {
-                  isSyncingSubScroll = true;
-                  mainDiv.scrollTop = subDiv.scrollTop;
-              }
-              isSyncingMainScroll = false;
-              isSyncingSubScroll = false;
-          }
-  
-          mainDiv.addEventListener("scroll", syncScroll);
-          subDiv.addEventListener("scroll", syncScroll);
-      });
-  </script>
+
+            // 입력값을 숫자로 제한하는 함수
+            function updateValue(input) {
+                const value = input.value;
+                const sanitizedValue = value.replace(/[^0-9]/g, '');
+                input.value = sanitizedValue;
+            }
+
+            // 모든 숫자 입력 필드에 대해 이벤트 리스너 추가
+            const numberInputs = document.querySelectorAll('.hourMoneyEditContentText, #numberOnly');
+            numberInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    updateValue(this);
+                });
+            });
+        });
+      //숫자만 입력되게
+
+      
+    </script>
 
   </body>
 </html>
