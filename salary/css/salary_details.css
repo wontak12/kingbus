@@ -1,0 +1,123 @@
+.salaryDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 59.5rem;
+    height: 84.2rem;
+    padding: 1rem;
+
+    box-sizing: border-box;
+    background-color: white;
+}
+
+table{
+    font-size: 1rem;
+}
+
+.detailsTitle{
+    font-size: 2.5rem;
+    color: black;
+    border-bottom: 0.1rem solid black;
+    margin-top: 2.4rem;
+    padding-bottom: 1rem;
+}
+
+.personalInformation{
+    margin-top: 2rem;
+    width: 57.5rem;
+    border-spacing: 0;
+    height: 5rem;
+    background-color: #fff;
+}
+
+.titleTd{
+    background-color: #EFF0F2;
+
+}
+
+.personalInformation table{
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 0.1rem solid black;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.personalInformation table tbody tr td,
+.detailsContent table tbody tr td{
+    border: 0.1rem solid black;
+    
+}
+
+.detailsContent{
+    text-align: end;
+    width: 57.5rem;
+    height: 36.8rem;
+    box-sizing: border-box;
+    border-spacing: 0;
+    margin-top: 2.1rem;
+}
+
+.detailsContent table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.tableWidth{
+    width: 25%;
+}
+
+.detailsContent .titleTd{
+    text-align: center;
+}
+
+.detailsContent table tbody tr td:not(.titleTd){
+    padding-right: 1rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.informationWidth td:nth-child(1){
+    width: 14%;
+}
+
+.informationWidth td:nth-child(2),
+.informationWidth td:nth-child(4),
+.informationWidth td:nth-child(6){
+    width: 12%;
+}
+
+.informationWidth td:nth-child(3){
+    width: 18%;
+}
+
+.informationWidth td:nth-child(5){
+    width: 14%;
+}
+
+.informationWidth td:nth-child(7){
+    width: 18%;
+}
+
+.comapanyDate{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thankYou{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+}
