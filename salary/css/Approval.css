@@ -1,0 +1,63 @@
+.MainContentsContainer{
+    display: flex;
+    flex-direction: row;
+}
+.contentDiv{
+    border: 0.1rem solid #CDCDCE;
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+    background-color: white;
+}
+
+.content{
+    width: 92%;
+    height: auto;
+    padding: 1rem;
+}
+
+.moveButtonArea{
+    margin-right: 1.8rem;
+    width: 8%;
+}
+
+.approvalHeader{
+    height: 6rem;
+}
+
+/* 검색창 설정 */
+.prevBtn, .nextBtn{
+    cursor: pointer;
+}
+
+.searchForm{
+    padding-left: 2rem;
+    gap: 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchName{
+    width: 30rem;
+    border: 0.1rem solid #CDCDCE;
+    border-radius: 0.2rem;
+    
+}
+
+.searchHeight{
+    height: 3rem;
+}
+
+.searchDate{
+    width: 15rem;
+    border: 0.1rem solid #CDCDCE;
+    border-radius: 0.2rem;
+}
+
+.dateBtn{
+    background-color: #444444;
+    border: none;
+    color: white;
+    width: 6.8rem;
+    font-size: 1.6rem;
+}
