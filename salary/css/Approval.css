@@ -21,6 +21,7 @@
 
 .approvalHeader{
     height: 6rem;
+    border-radius: 0.6rem;
 }
 
 /* 검색창 설정 */
@@ -30,7 +31,7 @@
 
 .searchForm{
     padding-left: 2rem;
-    gap: 1rem;
+    gap: 1.5rem;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -40,7 +41,7 @@
 .searchName{
     width: 30rem;
     border: 0.1rem solid #CDCDCE;
-    border-radius: 0.2rem;
+    border-radius: 0.6rem;
     
 }
 
@@ -51,7 +52,7 @@
 .searchDate{
     width: 15rem;
     border: 0.1rem solid #CDCDCE;
-    border-radius: 0.2rem;
+    border-radius: 0.6rem;
 }
 
 .dateBtn{
@@ -60,4 +61,129 @@
     color: white;
     width: 6.8rem;
     font-size: 1.6rem;
+    border-radius: 0.6rem;
+}
+
+/* 필터 css */
+.filter{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8rem;
+    width: 100%;
+    height: 8rem;
+    border: 0.1rem solid #CDCDCE;
+    border-radius: 0.6rem;
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+}
+
+
+.column{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column > *{
+    font-size: 1.6rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first, .second{
+    height: 50%;
+}
+
+.title{
+    color: white;
+    width: 15%;
+    background-color: #444444;
+}
+
+.firstTitle{
+    border-radius: 0.6rem 0 0 0;
+}
+
+.SecondFirstTitle{
+    border-radius: 0 0 0 0.6rem;
+}
+.firstDetail{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+.firstFilterSelect{
+    margin-left: 5rem;
+}
+
+
+.secondDetail{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+
+}
+
+.filterShadow{
+    box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+}
+
+.filterSelect{
+    width: 25%;
+}
+.yesOrNo{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+/* 정렬버튼 */
+.orderBtnArea{
+    margin-block: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 3.5rem;
+}
+
+.orderBtn{
+    width: 10rem;
+    height: 3rem;
+    background-color: #444444;
+    border: none;
+    color: white;
+    border-radius: 0.6rem;
+}
+
+/* 테이블 */
+.contentsAreaBox{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2rem);
+    height: 52rem;
+    background-color: white;
+    border: 0.1rem solid #CDCDCE;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+.contentsTable thead {
+    border-collapse: collapse;
+}
+
+.headLine{
+
+    border-spacing: 0;
+    padding: 0;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: #444444;
 }

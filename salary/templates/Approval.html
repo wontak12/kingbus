@@ -41,7 +41,7 @@
                 src="/kingbus/salary/images/notice.png?v=0.1236"
                 alt="공지사항 아이콘"
               />
-              <div>공지사항</div>
+              <div>공지사항</div> 
               <svg
                 class="sideMenuArrow"
                 xmlns="http://www.w3.org/2000/svg"
@@ -555,7 +555,9 @@
         </div>
 
         <div class="mainContent content contentDiv">
+
           <div class="approvalHeader contentDiv"> 
+
             <form action="" class="searchForm">
               <input type="text" class="searchName searchHeight"/>
               <input type="date" class="searchDate searchHeight">
@@ -576,8 +578,75 @@
               </svg>
               <button class="dateBtn searchHeight">검색</button>
             </form>
+
           </div>
-        </div>
+
+          <div class="filter">
+              
+            <div class="column first">
+              <div class="firstTitle title">분류</div>
+              <div class="firstDetail detail filterShadow">
+                <div class="filterSelect firstFilterSelect"><input type="radio" name="selectOne"> 휴가계 </div>
+                <div class="filterSelect"><input type="radio" name="selectOne"> 입퇴사 </div>
+                <div class="filterSelect"><input type="radio" name="selectOne"> 지출결의서 </div>
+                <div class="filterSelect"><input type="radio" name="selectOne"> 사고 처리 </div>
+                <div class="filterSelect"></div>
+              </div>
+              <div class="secondTitle title">승인여부</div>
+              <div class="secondDetail detail filterShadow">
+                <div class="yesOrNo"> <input type="radio"> 승인</div>
+                <div > <input type="radio"> 반려</div>
+              </div>
+            </div>
+
+            <div class="column second">
+              <div class="firstTitle title SecondFirstTitle">처리상태</div>
+              <div class="firstDetail detail">
+                <div class="filterSelect firstFilterSelect"><input type="radio" name="selectTwo"> 대기 </div>
+              <div class="filterSelect"><input type="radio" name="selectTwo"> 처리 </div>
+              <div class="filterSelect"><input type="radio" name="selectTwo"> 완료 </div>
+              <div class="filterSelect"><input type="radio" name="selectTwo"> 수신 </div>
+              <div class="filterSelect"></div>
+            </div>
+
+              <div class="secondTitle title"></div>
+              <div class="secondDetail detail"></div>
+            </div>
+
+
+
+
+
+          </div>
+
+          <div class="orderBtnArea">
+            <button class="orderBtn">전체</button>
+            <button class="orderBtn">오름차순</button>
+            <button class="orderBtn">내림차순</button>
+          </div>
+
+          <div class="contentsAreaBox">
+            <table class="contentsTable">
+              <thead>
+                <tr class="headLine">
+                  <td><input type="checkbox" name="" id=""></td>
+                  <td>번호</td>
+                  <td>날짜</td>
+                  <td>담당업무</td>
+                  <td>신청자</td>
+                  <td>분류</td>
+                  <td>제목</td>
+                  <td>증빙서류</td>
+                  <td>처리상태</td>
+                  <td>담당자</td>
+                  <td>검토</td>
+                  <td>검토</td>
+                  <td>승인</td>
+                  <td>승인여부</td>
+                </tr>
+              </thead>
+            </table>
+          </div>
 
         
       </div>
