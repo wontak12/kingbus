@@ -23,6 +23,12 @@ a{
     color: inherit;
 }
 
+.flex > *, .personalFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*trp*/
 .trp {
     position: relative;
