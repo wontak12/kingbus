@@ -153,19 +153,12 @@
     border-right: none;
 }
 
-
-
-.T {
-    flex-direction: column;
-}
-
-.tbodyTdTime{
+.tbodyTdTime, .T{
     flex-direction: column;
 }
 
 .tbodyDivTdTdTime, .tbodyDivTdTdSum{
     width: 100%;
-    height: auto;
 }
 
 .tbodyDivTdTdTimeValue{
@@ -188,6 +181,10 @@
 }
 
 
-.tbodyTdTime {
-    height: auto; /* tbodyTdTime 클래스의 높이를 자동으로 설정 */
+.tbodyDiv{
+    height: auto;
+}
+
+.tbodyInformationElement{
+    
 }
