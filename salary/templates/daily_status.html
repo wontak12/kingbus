@@ -573,21 +573,23 @@
               <div class="theadTh th">번호</div>
               <div class="theadTh th">이름</div>
               <div class="theadTh th">직책</div>
-              <div class="theadTh th">회차</div>
-              <div class="theadTh th">노선명</div>
-              <div class="theadTh th">출/퇴근</div>
-              <div class="theadTh th">차고지</div>
-              <div class="theadTh th">운행출발</div>
-              <div class="theadTh th">운행도착</div>
-              <div class="theadTh th">대기장소</div>
-              <div class="theadTh th">차고지</div>
-              <div class="theadTh th theadThDetails">
-                <div class="theadThTitle personalFlex">근로내역</div>
-                <div class="theadThContent personalFlex">
-                  <div class="theadThContents personalFlex">총 시간</div>
-                  <div class="theadThContents personalFlex">야간근로</div>
-                  <div class="theadThContents personalFlex">휴일(8시간 이하)</div>
-                  <div class="theadThContents personalFlex theadThContentsLast">휴일(8시간 초과)</div>
+              <div class="theadTh theadThTime flex">
+                <div class="theadThTh theadThThImformation th">회차</div>
+                <div class="theadThTh theadThThImformation th">노선명</div>
+                <div class="theadThTh theadThThImformation th">출/퇴근</div>
+                <div class="theadThTh th">차고지</div>
+                <div class="theadThTh th">운행출발</div>
+                <div class="theadThTh th">운행도착</div>
+                <div class="theadThTh th">대기장소</div>
+                <div class="theadThTh th">차고지</div>
+                <div class="theadThTh th theadThDetails">
+                  <div class="theadThTitle personalFlex">근로내역</div>
+                  <div class="theadThContent personalFlex">
+                    <div class="theadThContents personalFlex">총 시간</div>
+                    <div class="theadThContents personalFlex">야간근로</div>
+                    <div class="theadThContents personalFlex">휴일(8시간 이하)</div>
+                    <div class="theadThContents personalFlex theadThContentsLast">휴일(8시간 초과)</div>
+                  </div>
                 </div>
               </div>
               <div class="theadTh th">확인서명</div>
@@ -597,22 +599,50 @@
 
               <div class="tbodyDiv personalFlex">
                 
-                <div class="tbodyDivTd  tbodyInformationElement">
+                <div class="tbodyDivTd  tbodyInformationElement td">
                   <input type="checkbox" name="" id="">
                 </div>
-                <div class="tbodyDivTd tbodyInformationElement personalFlex">1</div>
-                <div class="tbodyDivTd tbodyInformationElement flex">김원탁</div>
-                <div class="tbodyDivTd tbodyInformationElement">팀장</div>
-                <div class="tbodyDivTd tbodyInformationElement personalFlex T">
-                  <div class="tbodyDivTdTd">1회</div>
-                  <div class="tbodyDivTdTd">소계</div>
+                <div class="tbodyDivTd tbodyInformationElement td">1</div>
+                <div class="tbodyDivTd tbodyInformationElement td">김원탁</div>
+                <div class="tbodyDivTd tbodyInformationElement td">팀장</div>
+                <div class="tbodyDivTd tbodyTdTime personalFlex td">
+                  <div class="tbodyDivTdTdTime tbodyT personalFlex">
+                    <div class="tbodyDivTdTd tbodyDivTdTdInformation td">1회</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdInformation td">영통1</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdInformation td">출근</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">05:40</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">06:23</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">07:15</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">07:15</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">0</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">01:35</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:20</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:00</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:00</div>
+                  </div>
+
+
+                  
+
+                  
+                  <div class="tbodyDivTdTdSum personalFlex">
+                    <div class="tbodyDivTdTd tbodyDivTdTdInformation td">소계</div>
+                    <div class="tbodyDivTdTd none td">해당없음</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">01:35</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:20</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:00</div>
+                    <div class="tbodyDivTdTd tbodyDivTdTdTimeValue td">00:00</div>
+                  </div>
+
                 </div>
-                <div class="tbodyDivTdTd"></div>
+                <div class="tbodyDivTd tbodyInformationElement td">(서명)</div>                
+
+              </div>
 
               </div>
 
             </div>
-
+            
           </div>
 
         </div>
@@ -625,5 +655,25 @@
     </div>
     <script src="/kingbus/salary/js/global.js"></script>
     <script src="/kingbus/salary/js/sidebar.js"></script>
+    <script>
+    let tbodyTElements = document.getElementsByClassName("tbodyT");
+    let tbodyTElementCount = tbodyTElements.length;
+
+
+    function calculateHeight(count) {
+        let height = 6 + 3 * (count - 1);
+        return height;
+    }
+
+    let newHeight = calculateHeight(tbodyTElementCount);
+
+
+    // tbodyDiv의 높이를 설정
+    let tbodyDivs = document.getElementsByClassName("tbodyDiv");
+    for (let i = 0; i < tbodyDivs.length; i++) {
+        tbodyDivs[i].style.height = newHeight + "rem";
+
+    }
+    </script>
   </body>
 </html>

@@ -159,7 +159,7 @@
 
 .tbodyDivTdTdTime, .tbodyDivTdTdSum{
     width: 100%;
-    height: 2rem;
+    height: 3rem;
 }
 
 .tbodyDivTdTdTimeValue{
@@ -183,10 +183,23 @@
 
 
 .tbodyDiv{
-    height: auto;
-    min-height: 4rem;
+    height: 8rem;
+    min-height: 6rem;
 }
 
+.tbodyDiv > *,
+.tbodyDivTdTdTime,
+.tbodyDivTdTdSum {
+    height: 100%;
+}
+
+
+
 .tbodyInformationElement{
-    min-height: 4rem;
+    min-height: 6rem;
+}
+
+.tbodyDivTdTdTime > *,
+.tbodyDivTdTdSum > *{
+    height: 100%;
 }
