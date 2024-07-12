@@ -101,7 +101,7 @@
 .td{
     background-color: white;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
 }
 
@@ -184,6 +184,7 @@
 
 .tbodyDiv{
     height: auto;
+    min-height: 4rem;
 }
 
 .tbodyInformationElement{
